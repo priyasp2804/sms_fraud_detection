@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server/app.py"  // Adjust path if necessary
+      "dest": "server/app.py" 
     }
   ],
   "installCommand": "pip install -r requirements.txt"
