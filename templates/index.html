@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>SMS Fraud Detection</h1>
+            <p class="subheading">Detect whether your message is spam or not!</p>
+            <form action="/predict" method="post">
+                <textarea name="message" rows="5" placeholder="Enter your message here"></textarea><br>
+                <button type="submit">Check Message</button>
+            </form>
+            {% if prediction_text %}
+                <div class="result">
+                    <h3>{{ prediction_text }}</h3>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
